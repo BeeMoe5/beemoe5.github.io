@@ -1,0 +1,25 @@
+:root {
+    --text-color: rgb(233, 239, 239);
+}
+
+body {
+    background-color: gray;
+}
+
+#bb {
+    border-color: yellow;
+    border-radius: 100%;
+}
+
+#paragraph p {
+    font-size: 3ch;
+    color: var(--text-color);
+    vertical-align: middle;
+    display: inline;
+    
+}
+
+#paragraph a {
+    color: var(--text-color); 
+    font-weight: bold;
+}
