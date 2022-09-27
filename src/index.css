@@ -1,14 +1,34 @@
 :root {
-    --text-color: rgb(233, 239, 239);
+    --text-color: #f2f2f2;
+    --bg-rhombus-color1: #940016;
+    --bg-rhombus-color2: #000000;
+}
+
+@font-face {
+    font-family: "Painting With Chocolate";
+    src: url("fonts/Painting_With_Chocolate.ttf");
+}
+
+@font-face {
+    font-family: "Library Three AM";
+    src: url("fonts/Library\ 3\ am.otf");
 }
 
 body {
-    background-color: gray;
+    background-image: linear-gradient(135deg, var(--bg-rhombus-color1) 25%, transparent 25%), linear-gradient(225deg, var(--bg-rhombus-color1) 25%, transparent 25%), linear-gradient(45deg, var(--bg-rhombus-color1) 25%, transparent 25%), linear-gradient(315deg, var(--bg-rhombus-color1) 25%, var(--bg-rhombus-color2) 25%);
+    background-position: 20px 0, 20px 0, 0 0, 0 0;
+    background-size: 20px 20px;
+    background-repeat: repeat;
 }
 
-#bb {
-    border-color: yellow;
-    border-radius: 100%;
+#box {
+    width: 60%;
+    margin: 5ch auto;
+    background-color: #51515145;
+    border-style: solid;
+    border-color: #2424248e;
+    border-width: 1ch;
+    font-family: "Library Three AM";
 }
 
 #paragraph p {
@@ -16,10 +36,10 @@ body {
     color: var(--text-color);
     vertical-align: middle;
     display: inline;
-    
+
 }
 
 #paragraph a {
-    color: var(--text-color); 
+    color: #ffffff;
     font-weight: bold;
 }
