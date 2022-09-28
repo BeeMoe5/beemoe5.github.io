@@ -1,7 +1,8 @@
 :root {
     --text-color: #f2f2f2;
-    --bg-rhombus-color1: #940016;
-    --bg-rhombus-color2: #000000;
+    --bg-pattern-color1: #6965a9;
+    --bg-pattern-color2: #655bb4;
+    --bg-pattern-color3: #4a5785;
 }
 
 @font-face {
@@ -14,22 +15,32 @@
     src: url("fonts/Library\ 3\ am.otf");
 }
 
-body {
-    background-image: linear-gradient(135deg, var(--bg-rhombus-color1) 25%, transparent 25%), linear-gradient(225deg, var(--bg-rhombus-color1) 25%, transparent 25%), linear-gradient(45deg, var(--bg-rhombus-color1) 25%, transparent 25%), linear-gradient(315deg, var(--bg-rhombus-color1) 25%, var(--bg-rhombus-color2) 25%);
-    background-position: 20px 0, 20px 0, 0 0, 0 0;
-    background-size: 20px 20px;
-    background-repeat: repeat;
+@font-face {
+    font-family: "Mouse Memoirs";
+    src: url("fonts/MouseMemoirs-Regular.ttf");
 }
 
-#box {
+#box::before {
+    background-image: linear-gradient(135deg, var(--bg-pattern-color1) 25%, transparent 25%), linear-gradient(225deg, var(--bg-pattern-color3) 25%, transparent 25%), linear-gradient(45deg, var(--bg-pattern-color1) 25%, transparent 25%), linear-gradient(315deg, var(--bg-pattern-color3) 25%, var(--bg-pattern-color2) 25%);
+    background-size: 70px 70px;
+    position: absolute;
+    content: '';
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+}
+
+#paragraph {
+    position: relative;
     width: 60%;
     margin: 5ch auto;
-    background-color: #51515145;
+    background-color: #0000005b;
     border-style: solid;
-    border-color: #2424248e;
-    border-width: 1ch;
-    font-family: "Library Three AM";
-}
+    border-width: .2ch;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: large;
+  }
 
 #paragraph p {
     font-size: 3ch;
@@ -40,6 +51,7 @@ body {
 }
 
 #paragraph a {
+    /* brighter than --text-color */
     color: #ffffff;
-    font-weight: bold;
+
 }
